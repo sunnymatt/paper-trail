@@ -78,7 +78,7 @@ $\textsf{merge(z,q)}$ :
 
 Interpreting the updates: the $\textsf{merge}$ algorithm takes two different calibrated predictors and combines them into a refinement. This is obviously helpful when, for example, a lender wants to combine predictions from different sources. In addition, this framework also helps us a way to *reason about the marignal informativeness of individual boolean features*; the greater the difference between $\mathbf{E}_{x\sim\phi^{-1}(0)}[p^*(x)]$ and $\mathbf{E}_{x\sim\phi^{-1}(1)}[p^*(x)]$, the more informative.
 
-* This can help us show that a subpopulation S is experiencing discrimination under a predictor z if merging the predictor based solely on S changes the information content!
+* This can help us show that a subpopulation S is experiencing discrimination under a predictor z if merging the predictor based solely on S changes the information content! Neat.
 
 # Lingering questions
 

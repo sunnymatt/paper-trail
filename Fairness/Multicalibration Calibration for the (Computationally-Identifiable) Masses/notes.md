@@ -10,7 +10,7 @@ A strong definition of fairness would require that calibration holds on _every_ 
 
 Alludes to fact that algorithm will learn a generalizable model and also that computational complexity of learning a multicalibrated predictor with respect to $\mathcal{C}$ is equivalent to weak agnostic learning $\mathcal{C}$.
 
-# Learning multicalibrated predictors
+## Learning multicalibrated predictors
 * Algorithm maintains candidate predictor $f$
 * Corrects candidate values of some subset that violates calibration
 * Stops when candidate predictor is $\alpha$-calibrated on every $S\in\mathcal{C}$
@@ -18,7 +18,6 @@ Alludes to fact that algorithm will learn a generalizable model and also that co
 Next, they define $\tilde{q}$ as a guess-and-check oracle that compares $p_{S}=\mathbf{E}_{i\sim S}[p^*_i]$ with a particular $v \in [0,1]$ and returns a ✔ if $v$ is within some range of the correct value $p_S$.
 
 # Discussion
-
 Interesting quote: 
 
 > In a prediction setting where, given the data, there is still significant uncertainty in the outcome we feel that multicalibration should be considered as an alternative to balanced error rates. That said, a serious form of discrimination could arise if the uncertainty in outcomes is very different across different subpopulations; this would be a form of information-theoretic discrimination that multicalibration could help to identify, but could not remedy directly. 
