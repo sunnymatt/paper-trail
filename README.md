@@ -9,6 +9,4 @@ Notes on papers that I've read. Papers are roughly organized into categories, an
 <img src="https://raw.githubusercontent.com/matthewkol186/paper-trail/master/html_preview.gif">
 
 ### Up Next
-Aulck, Lovenoor, et al. "Predicting student dropout in higher education." arXiv preprint arXiv:1606.06364 (2016). [Link](https://arxiv.org/pdf/1606.06364.pdf)
-
 Anderson, Henry, Afshan Boodhwani, and Ryan S. Baker. "Assessing the Fairness of Graduation Predictions." [Link](https://drive.google.com/file/d/1h_RGk4VZj-x0kOKTCISgyoRvWfLE6PLC/view)

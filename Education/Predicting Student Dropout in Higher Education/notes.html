@@ -1,0 +1,60 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js">
+<link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/texmath.css">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+
+<style>
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+}
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}
+</style>
+</head>
+<body class="markdown-body">
+<h1 id="predicting-student-dropout-in-higher-education-2" data-line="0" class="code-line">Predicting Student Dropout in Higher Education</h1>
+<p data-line="2" class="code-line"><a href="https://arxiv.org/pdf/1606.06364.pdf" data-href="https://arxiv.org/pdf/1606.06364.pdf">Link</a></p>
+<p data-line="4" class="code-line">Student dropout is a major concern in education, with about 40% of students not receiving their degree within 6 years. This costs state and federal governments billions of dollars.</p>
+<h2 id="data-2" data-line="6" class="code-line">Data</h2>
+<p data-line="7" class="code-line">De-identified, pseudonymized data</p>
+<ul>
+<li data-line="8" class="code-line">Contains demographic information</li>
+<li data-line="9" class="code-line">SAT &amp; ACT scores</li>
+<li data-line="10" class="code-line">Complete transcript records</li>
+<li data-line="11" class="code-line">Imputed missing SAT/ACT scores using linear regression and mean imputation as well</li>
+<li data-line="12" class="code-line">No financial data</li>
+</ul>
+<h2 id="experiments-2" data-line="14" class="code-line">Experiments</h2>
+<ul>
+<li data-line="15" class="code-line">Regularized logistic regression, KNN, and random forests to predict binary dropout variable</li>
+<li data-line="16" class="code-line">30% test, 70% train/val</li>
+<li data-line="17" class="code-line">To understand feature importance, they train <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span></eq> separate logistic regressions on the <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span></eq>-th feature, trained on training set and tested on testing set
+<ul>
+<li data-line="18" class="code-line">What this means: trained logistic regressions with 1 feature using k-fold validation</li>
+</ul>
+</li>
+</ul>
+<h2 id="results-2" data-line="20" class="code-line">Results</h2>
+<ul>
+<li data-line="21" class="code-line">AUC of 0.729 with logistic regression</li>
+<li data-line="22" class="code-line">GPA in math classes, English classes, chemistry, psychology classes most predictive of dropout (but no higher than accuracy of 54%)</li>
+</ul>
+<h3 id="cited-by-2" data-line="25" class="code-line">Cited by</h3>
+<ul>
+<li data-line="26" class="code-line">Diagnosing university student subject proficiency and predicting degree completion in vector space (<a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/download/16553/16405" data-href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/download/16553/16405">Link</a>)</li>
+<li data-line="27" class="code-line">Predicting performance of electrical engineering students using cognitive and non-cognitive features for identification of potential dropouts (<a href="https://journals.sagepub.com/doi/pdf/10.1177/0020720916688484" data-href="https://journals.sagepub.com/doi/pdf/10.1177/0020720916688484">Link</a>)</li>
+<li data-line="28" class="code-line">STEM-ming the Tide: Predicting STEM attrition using student transcript data (<a href="https://arxiv.org/pdf/1708.09344.pdf" data-href="https://arxiv.org/pdf/1708.09344.pdf">Link</a>)</li>
+<li data-line="29" class="code-line">Predicting Dropout in Higher Education based on Secondary School Performance (<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8523888" data-href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8523888">Link</a>)</li>
+<li data-line="30" class="code-line">Predicting student dropout: A machine learning approach (<a href="https://srhe.tandfonline.com/doi/abs/10.1080/21568235.2020.1718520" data-href="https://srhe.tandfonline.com/doi/abs/10.1080/21568235.2020.1718520">Link</a>)</li>
+</ul>
+
+</body></html>
