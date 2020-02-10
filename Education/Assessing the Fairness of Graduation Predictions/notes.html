@@ -1,0 +1,56 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js">
+<link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/texmath.css">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+
+<style>
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+}
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}
+</style>
+</head>
+<body class="markdown-body">
+<h1 id="assessing-the-fairness-of-graduation-predictions-3" data-line="0" class="code-line">Assessing the Fairness of Graduation Predictions</h1>
+<p data-line="2" class="code-line"><a href="https://drive.google.com/file/d/1h_RGk4VZj-x0kOKTCISgyoRvWfLE6PLC/view" data-href="https://drive.google.com/file/d/1h_RGk4VZj-x0kOKTCISgyoRvWfLE6PLC/view">Link</a></p>
+<p data-line="4" class="code-line">Main research questions: are graduation predictors <em>equitable</em>? Are they <em>optimal</em>? Could they achieve better accuracy by using models specific to certain subgroups?</p>
+<h2 id="fairness-in-this-scenario-3" data-line="6" class="code-line">Fairness in this scenario</h2>
+<ul>
+<li data-line="7" class="code-line">Anticipate difference in false positive / false negative rates</li>
+<li data-line="8" class="code-line">Argue that false positives are most important here; students who are not on track to graduate but are predicted to graduate will not be given proper support/mentoring</li>
+</ul>
+<h2 id="data-3" data-line="10" class="code-line">Data</h2>
+<ul>
+<li data-line="11" class="code-line">Large R1 publicly-funded university in the South</li>
+<li data-line="12" class="code-line">Feature set incldues academic performance, financial information, pre-admission info (SAT/ACT), and extra-curricular activities</li>
+</ul>
+<h2 id="models-3" data-line="14" class="code-line">Models</h2>
+<ul>
+<li data-line="15" class="code-line">5 separate models (SVM, Decision Trees, Random Forests, Logistic Regression, SGD classifier)</li>
+</ul>
+<h2 id="results-3" data-line="17" class="code-line">Results</h2>
+<ul>
+<li data-line="18" class="code-line">All models had AUC ~ 0.8</li>
+</ul>
+<h3 id="equity-3" data-line="19" class="code-line">Equity</h3>
+<ul>
+<li data-line="20" class="code-line">White students had higher false positive rates and lower false negative rates</li>
+<li data-line="21" class="code-line">Hispanic/Latino students had higher false negative rates</li>
+<li data-line="22" class="code-line">Male students had consistently higher false negative rates</li>
+</ul>
+<h3 id="optimality-3" data-line="23" class="code-line">Optimality</h3>
+<ul>
+<li data-line="24" class="code-line">Usually performance didn't differ more than the standard error; population-specific model saw a decrease in performance on Asian students</li>
+</ul>
+
+</body></html>
